@@ -75,7 +75,6 @@ const Jobs = ({ jobList }) => {
             </div>
             {
                 //Showing loading if jobs are not fetched yet
-                // showLoading ? <Spinner /> : <JobList jobs={myJobs} cardLimit={cardLimit} />
                 showLoading ? <Spinner /> : <JobList jobs={myJobs} cardLimit={cardLimit} textLimit={140} />
             }
 

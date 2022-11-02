@@ -1,7 +1,15 @@
+import { useEffect } from 'react';
 import Head from 'next/head'
-import Link from 'next/link';
+import { useRouter } from 'next/router';
+import Spinner from '../components/Loader.js'
+export default function Home() { 
+  const { push } = useRouter();
+  
+useEffect(() => {
+  push('/test/jobs');
+}, []);
 
-export default function Home() {
+
   return (
     <div className="container">
       <Head>
@@ -10,12 +18,7 @@ export default function Home() {
       </Head>
 
       <main className="main">
-        <h1 className="title">
-          Go to {''}
-          <Link href="/test/jobs">
-            Job List
-          </Link>
-        </h1>
+      <Spinner />
       </main>
     </div>
   )
